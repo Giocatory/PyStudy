@@ -9,3 +9,26 @@
 #
 # Примечание. Палиндром читается одинаково в обоих направлениях, например слово «потоп».
 
+def wal(s):
+	if len(s) % 2 == 0:
+		return True
+	else:
+		return False
+
+
+def palindrome(s):
+	if wal(s):
+		n = len(s)//2
+		if s[0:n] == s[-1:-n-1:-1]:
+			print('palindrome')
+		else:
+			print('not palindrome')
+	else:
+		n = len(s)//2
+		if s[0:n+1] == s[-1:-n-2:-1]:
+			print('palindrome')
+		else:
+			print('not palindrome')
+
+
+palindrome(input('write word: '))
