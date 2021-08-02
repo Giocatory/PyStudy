@@ -14,12 +14,9 @@
 # декодированное сообщение.
 # Обратите внимание, что нужно декодировать сообщение, а не закодировать.
 
-number = int(input('Сдвиг: '))  # 1<=n<=25
-cipher_line = input('Кодированная строка: ')
-encoding_line = ""
-if 1 <= number <= 25:
-    for i in range(len(cipher_line)):
-        encoding_line += chr(ord(cipher_line[i])-number)
-else:
-    print('not true number')
-print(encoding_line)
+n, s = int(input()), input()
+for c in s:
+    if ord(c) - n < 97:
+        print(chr(122 - (96 - ord(c) + n)), end='')
+    else:
+        print(chr(ord(c) - n), end='')
