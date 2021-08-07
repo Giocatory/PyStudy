@@ -11,3 +11,10 @@
 #
 # Примечание. Считайте, что все строки состоят из строчных символов.
 
+n = int(input())
+word_list = []
+for i in range(n):
+    word = input().lower()
+    if word not in word_list:
+        word_list.append(word)
+print(*word_list, sep='\n')
