@@ -1,5 +1,4 @@
-nums = [int(i) for i in input().split()]
-for i in range(1, len(nums)):
-    if i % 2 != 0:
-        nums[i], nums[i-1] = nums[i-1], nums[i]
-print(*nums)
+n = int(input())
+lines = [input() for i in range(n)]
+error_line = [i for i in range(len(lines)) if ['a', 'n', 't', 'o', 'n'] in lines[i]]
+print(*error_line)
