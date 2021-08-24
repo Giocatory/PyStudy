@@ -1,10 +1,12 @@
-my_list = [[12, 221, 3], [41, 5, 633], [71, 8, 99]]
+n = int(input())  # How many rows and columns will there be?
+# lists = [[j for j in range(i)] for i in range(1, n+1)]
+lists = []
+for i in range(n):
+    new_list = []
+    for j in range(i):
+        new_list.append(j)
+    lists.append(new_list)
 
-maximum = my_list[0][0]
-minimum = my_list[0][0]
+for rows in lists:
+    print(rows)
 
-for row in my_list:
-    maximum = max(row)
-    minimum = min(row)
-
-print(maximum + minimum)
