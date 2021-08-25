@@ -1,21 +1,27 @@
-n= int(input())
+n = int(input())
 matrix = []
-temp = []
-total = 0
-counter = 0
+top, right, left, bottom = [], [], [], []
 
 for rows in range(n):
     temp.extend([int(i) for i in input().split()])
     matrix.append(temp)
     temp = []
 
-for rows in range(n):
-    for cols in range(n):
-        total += matrix[rows][cols]
-    total /= n
-    for cols in range(n):
-        if cols > total:
-            counter += 1
-    print(counter)
-    total = 0
-    counter = 0
+for i in range(n):
+    for j in range(n):
+        if j == i and i + j + 1 == n:
+            continue
+        if i > j and i < n - 1 - j:
+            left.append(matrix[i][j])
+        if i < j and i > n - 1 - j:
+            right.append(matrix[i][j])
+        if i > j and i > n - 1 - j:
+            bottom.append(matrix[i][j])
+        if i < j and i < n - 1 - j:
+            top.append(matrix[i][j])
+
+print(f"Верхняя четверть: {sum(top)}\n"
+      f"Правая четверть: {sum(right)}\n"
+      f"Нижняя четверть: {sum(bottom)}\n"
+      f"Левая четверть: {sum(left)}"
+      )
