@@ -16,7 +16,9 @@
 # 5
 
 n = int(input())
-texts = []
+texts = set()
+
 for i in range(n):
-    texts.append(len(set(input().lower())))
-print(sum(texts))
+    s = set(input().lower())
+    texts.update(s)
+print(len(texts))
