@@ -1,15 +1,17 @@
-# На вход программе подаются две строки текста, содержащие числа.
-# Напишите программу, которая определяет количество чисел,
-# которые есть как в первой строке, так и во второй.
+matan, inform = int(input()), int(input())
+sp1 = []
+sp2 = []
 
-set_nums_one = set([int(i) for i in input().split()])
-set_nums_two = set([int(i) for i in input().split()])
-print(len(set_nums_one.intersection(set_nums_two)))
+for i in range(matan+inform):
+    fio = input()
+    if fio in sp1:
+        sp2.append(fio)
+    else:
+        sp1.append(fio)
 
-# Sample Input 1:
-#
-# 1 3 2
-# 4 3 2
-# Sample Output 1:
-#
-# 2
+sp = abs(len(sp1) - len(sp2))
+
+if sp == 0:
+    print('NO')
+else:
+    print(sp)
