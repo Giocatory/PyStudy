@@ -12,6 +12,9 @@ print('YES' if len(low_let)>0 and len(upp_let)>0 and len(dig_nums)>0 else 'NO')
 
 #2
 s = list(input())
-f = all([any(map(lambda c: c in string.ascii_uppercase, s)), any(map(lambda c: c in string.ascii_lowercase, s)), any(map(lambda c: c in string.digits, s)), len(s) >= 7
+f = all([any(map(lambda c: c in string.ascii_uppercase, s)),
+         any(map(lambda c: c in string.ascii_lowercase, s)),
+         any(map(lambda c: c in string.digits, s)),
+         len(s) >= 7
          ])
 print("YES" if f else "NO")
