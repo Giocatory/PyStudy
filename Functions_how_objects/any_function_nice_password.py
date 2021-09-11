@@ -8,7 +8,7 @@ password = input()
 low_let = [i for i in password if i.islower()]
 upp_let = [i for i in password if i.isupper()]
 dig_nums = [i for i in password if i in string.digits]
-print('YES' if len(low_let)>1 and len(upp_let)>1 and len(dig_nums)>1 else 'NO')
+print('YES' if len(low_let)>0 and len(upp_let)>0 and len(dig_nums)>0 else 'NO')
 
 #2
 s = list(input())
