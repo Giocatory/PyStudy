@@ -12,7 +12,7 @@
 #
 # Формат выходных данных
 # Программа должна вывести одно число — значение указанного многочлена при заданном значении x.
-def evaluate_task(*coefficients):
+def evaluate_task(coefficients):
     values = list(reversed(coefficients))
     def evaluate_x(x):
         res = 0

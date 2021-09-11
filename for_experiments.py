@@ -1,1 +1,0 @@
-print(*list(map(lambda x: abs(255 - x), list(map(int, input().split())))))
