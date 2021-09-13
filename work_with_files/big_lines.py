@@ -11,5 +11,3 @@ print(all_text[0])
 for i in range(1, len(all_text)):
     if len(all_text[i]) >= len(all_text[0]):
         print(all_text[i])
-    else:
-        break
