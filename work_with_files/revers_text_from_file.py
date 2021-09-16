@@ -1,5 +1,5 @@
 result = ''
-with open('text.txt') as file:
+with open('txt_files/text.txt') as file:
     for line in file:
         result += line.strip()
 

@@ -6,7 +6,7 @@
 # Напишите программу, которая вычисляет сумму всех чисел, записанных в файле.
 import re
 
-with open('nums1.txt') as file:
+with open('txt_files/nums1.txt') as file:
     nums = [line.strip() for line in file]
     total = []
     for i in range(len(nums)):

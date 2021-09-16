@@ -4,7 +4,7 @@
 
 import string
 
-file = open('file.txt', 'r', encoding='UTF-8')
+file = open('txt_files/file.txt', 'r', encoding='UTF-8')
 text = file.read()
 letters = 0
 

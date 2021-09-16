@@ -3,7 +3,7 @@
 # не меняя их порядок.
 
 all_text = []
-with open('lines.txt') as file:
+with open('txt_files/lines.txt') as file:
     for line in file:
         all_text.append(line.strip())
 all_text.sort(key=len, reverse=True)

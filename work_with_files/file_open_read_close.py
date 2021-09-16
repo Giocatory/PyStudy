@@ -1,10 +1,10 @@
-file = open('example.txt')
+file = open('txt_files/example.txt')
 for line in file:
     print(line.strip())
 file.close()
 
 print()
 
-with(open('example.txt', 'r+')) as file:
+with(open('txt_files/example.txt', 'r+')) as file:
     for line in file:
         print(line.strip())

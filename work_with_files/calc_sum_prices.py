@@ -4,7 +4,7 @@
 # количество товара (целое число);
 # цена (в рублях) товара за 11 шт (целое число).
 # Напишите программу, выводящую на экран общую стоимость заказа.
-file = open('prices.txt')
+file = open('txt_files/prices.txt')
 text_in_file = [line.strip().split() for line in file]
 total_prices = [int(lines[1])*int(lines[2]) for lines in text_in_file]
 print(sum(total_prices))
